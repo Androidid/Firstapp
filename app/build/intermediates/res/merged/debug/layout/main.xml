@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/main_view_pager"
+        />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight = "1"
+        android:id="@+id/main_fragment">
+    </FrameLayout>
+    <android.support.v4.app.FragmentTabHost
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/main_tabhost"
+        android:background="#809ad6"
+        android:layout_alignParentBottom="true">
+    </android.support.v4.app.FragmentTabHost>
+</RelativeLayout>
+<!-- From: file:/E:/Firstapp/app/src/main/res/layout/main.xml -->

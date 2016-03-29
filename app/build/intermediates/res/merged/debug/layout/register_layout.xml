@@ -1,0 +1,178 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background"
+     >
+
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/transparent"
+        android:text="登陆"
+        android:textColor="@android:color/white"
+       />
+    
+    
+
+    <LinearLayout
+        android:id="@+id/center_linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical" 
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp">
+		<LinearLayout 
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:background="@drawable/edittextbg"
+		    android:paddingTop="3dp"
+		    android:paddingBottom="3dp">
+			
+		    <ImageView
+		        android:layout_width="wrap_content"
+		        android:layout_height="match_parent"
+		        android:padding="2dp"
+		        android:src="@drawable/phone" />
+
+	        <EditText
+	            android:id="@+id/phone_number"
+	            android:singleLine="true"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:background="@null"
+	            android:hint="请输入手机号" 
+	            android:inputType="number"
+	            android:textSize="15dp"
+	            android:textColor="@android:color/white"/>
+		</LinearLayout>
+		<LinearLayout 
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:background="@drawable/edittextbg"
+		    android:paddingTop="3dp"
+		    android:paddingBottom="3dp">
+	        <ImageView 
+		        android:layout_width="wrap_content"
+		        android:layout_height="match_parent"
+		        android:padding="2dp"
+		        android:src="@drawable/password"/>
+	        <EditText
+	            android:id="@+id/password"
+	            android:singleLine="true"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:background="@null"
+	            android:hint="请输入密码"
+	            android:inputType="textPassword" 
+	            android:textSize="15dp"
+	            android:textColor="@android:color/background_light"/>
+
+	        <Button
+	            android:id="@+id/get_password"
+	            android:layout_width="44dp"
+	            android:layout_height="20dp"
+	            android:padding="0dp"
+	            android:text="获取密码"
+	            android:textSize="8dp" />
+
+	     </LinearLayout>
+        <Button
+            android:id="@+id/register_button"
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:background="@android:color/holo_blue_light"
+            android:text="注     册"
+            android:textColor="@android:color/white"
+            android:textSize="15dp" 
+            android:layout_marginTop="20dp"/>
+    </LinearLayout>
+    
+    <RelativeLayout 
+        android:id="@+id/bottom_linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+       	android:layout_alignParentBottom="true"
+        >
+
+           <Button
+               android:id="@+id/wechat_button"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentLeft="true"
+               android:layout_marginLeft="20dp"
+               android:layout_marginRight="25dp"
+               android:background="@drawable/wechat" />
+
+           <Button
+               android:id="@+id/weibo_button"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_centerInParent="true"
+               android:layout_weight="1"
+               android:layout_marginLeft="25dp"
+               android:layout_marginRight="25dp"
+               android:background="@drawable/weibo" />
+
+           <Button
+               android:id="@+id/QQ_button"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentRight="true"
+               android:layout_weight="1"
+               android:layout_marginLeft="25dp"
+               android:layout_marginRight="20dp"
+               android:background="@drawable/qq" />
+        
+    </RelativeLayout>
+    
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/center_linearlayout"
+        android:layout_below="@+id/login_button"
+        android:layout_centerInParent="true"
+        android:src="@drawable/lovestock" />
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottom_linearlayout"
+        >
+        <TextView 
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:background="#808080"
+            />
+        	
+        <TextView 
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="    其他方式注册"
+            android:textColor="@android:color/white"
+            />
+            <TextView 
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:background="#808080"
+
+            />
+            
+            
+        
+    </LinearLayout>
+    
+    
+
+</RelativeLayout><!-- From: file:/E:/Firstapp/app/src/main/res/layout/register_layout.xml -->

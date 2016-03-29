@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="E:\Firstapp\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="E:\Firstapp\app\build\intermediates\pre-dexed\debug\classes-320c6c0266e2c429257df79b6c81afde41cc57c3.jar" />
+    </item>
+    <item
+        jar="E:\Firstapp\app\build\intermediates\exploded-aar\Firstapp\library\unspecified\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="5ed7012e64a42159f246bc655befcf479563600e">
+        <dex dex="E:\Firstapp\app\build\intermediates\pre-dexed\debug\classes-4156a2810b9279c160214c6ebc92969c65218a03.jar" />
+    </item>
+    <item
+        jar="C:\android_sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.1\support-annotations-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="E:\Firstapp\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.1-29e5197ce00e555e4ab9aaad6fc36bfa9b53108c.jar" />
+    </item>
+    <item
+        jar="E:\Firstapp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="E:\Firstapp\app\build\intermediates\pre-dexed\debug\classes-3b1889e02fc4f7698237b2779439545f53990c96.jar" />
+    </item>
+    <item
+        jar="E:\Firstapp\app\libs\pinyin4j-2.5.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="ae353005f973da1cd8545b54354504c2503f6865">
+        <dex dex="E:\Firstapp\app\build\intermediates\pre-dexed\debug\pinyin4j-2.5.0-44abd57c74ee6205006227146b86d1c5e89303df.jar" />
+    </item>
+    <item
+        jar="E:\Firstapp\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\libs\internal_impl-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="E:\Firstapp\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.1-4c9311d7f2c13a0cda7db42c68390ec2216bc161.jar" />
+    </item>
+
+</items>

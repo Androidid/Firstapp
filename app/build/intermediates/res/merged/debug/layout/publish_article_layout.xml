@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4e6ad2"
+        >
+        <Button 
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="取消"
+            android:textColor="@android:color/white"
+            android:id="@+id/cancle4"
+            android:layout_alignParentLeft="true"
+            android:background="@null"
+            />
+        <TextView 
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="发表博文"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:layout_centerInParent="true"
+            />
+        <Button 
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="发布"
+            android:textColor="@android:color/white"
+            android:id="@+id/publish4"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            />
+        
+    </RelativeLayout>
+    <EditText 
+        android:id="@+id/input_article"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:hint="说点什么吧"
+        android:background="@null"
+        />
+
+</LinearLayout>
+<!-- From: file:/E:/Firstapp/app/src/main/res/layout/publish_article_layout.xml -->

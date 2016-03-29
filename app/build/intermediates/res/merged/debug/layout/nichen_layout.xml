@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background"
+    android:orientation="vertical" >
+    <Button 
+        android:id="@+id/back_button"
+        android:layout_width="50dp"
+        android:layout_height="35dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/back" />
+    <LinearLayout 
+        android:layout_below="@id/back_button"
+        android:layout_width="match_parent"
+        
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="请确认昵称"
+            android:textColor="@android:color/white"
+            android:textSize="20dp"
+            android:layout_margin="30dp"
+            />
+        <ImageView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/user"/>
+        
+        <LinearLayout 
+            android:layout_width="wrap_content"
+	        android:orientation="horizontal"
+	        android:layout_gravity="center_horizontal"
+	        android:layout_marginLeft="30dp"
+	        android:layout_marginRight="30dp"
+	        android:layout_margin="30dp"
+	        android:layout_height="wrap_content">
+	        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="昵称:"
+            android:textColor="@android:color/white"
+            android:textSize="18dp"
+            />
+	        <EditText 
+	            android:id="@+id/input_nicheng"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:background="@null"
+	            android:textColorHint="@android:color/secondary_text_dark"
+	            android:textSize="16dp"
+	            android:hint="    昵称     "
+	            android:singleLine="true"
+	            />
+
+	        <Button
+	            android:id="@+id/modify_nicheng_button"
+	            android:layout_width="38dp"
+	            android:layout_height="23dp"
+	            android:background="@android:color/holo_blue_light"
+	            android:text="修改"
+	            android:textColor="@android:color/white"
+	            
+	            android:textSize="16dp" />
+            
+        </LinearLayout>
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="*昵称一旦确认不可修改"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="14dp"
+            android:layout_margin="10dp"
+            />
+
+        <Button
+            android:id="@+id/ok_nicheng_button"
+            android:layout_width="match_parent"
+            android:layout_height="31dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:background="@android:color/holo_blue_light"
+            android:text="确     定"
+            android:textColor="@android:color/white"
+            android:textSize="16dp" />
+        
+    </LinearLayout>
+    
+
+</RelativeLayout>
+<!-- From: file:/E:/Firstapp/app/src/main/res/layout/nichen_layout.xml -->

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        android:textColor="#fff"
+        android:background="#000"
+        android:id = "@+id/chat_title"
+        />
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/chat_listview"
+        android:divider="@null"
+        android:background="#dad9d9"
+        android:clickable="false"
+        >
+    </ListView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+        <ImageButton
+            android:layout_width="20dp  "
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:src = "@drawable/biaoqing"
+            />
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/chat_edittext"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发送"
+            android:layout_gravity="center"
+            android:id="@+id/chat_send"
+            android:textStyle="normal"
+            android:background="#343fab"
+            android:textSize="20sp"
+            />
+    </LinearLayout>
+</LinearLayout>
