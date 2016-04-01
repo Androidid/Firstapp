@@ -12,6 +12,6 @@
         />
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp"></LinearLayout>
+        android:layout_height="40dp"> </LinearLayout>
 </LinearLayout>
 <!-- From: file:/E:/Firstapp/app/src/main/res/layout/secondfragment.xml -->

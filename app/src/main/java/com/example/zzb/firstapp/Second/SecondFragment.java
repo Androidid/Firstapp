@@ -40,8 +40,6 @@ public class SecondFragment extends Fragment implements  AdapterView.OnItemLongC
         getlist();
         mySecondAdapter = new MySecondAdapter(getActivity(),R.layout.second_listview_layout,list);
         pullToRefreshListView.setAdapter(mySecondAdapter);
-     //   mySecondAdapter.notifyDataSetChanged();
-
         pullToRefreshListView.setOnItemClickListener(this);
         pullToRefreshListView.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener<ListView>() {
             @Override
@@ -60,7 +58,6 @@ public class SecondFragment extends Fragment implements  AdapterView.OnItemLongC
     public void onResume() {
         super.onResume();
         Log.d("second","on resume");
-      //  mySecondAdapter.notifyDataSetChanged();
     }
 
     private ArrayList<Second_Item> getlist(){
@@ -70,7 +67,6 @@ public class SecondFragment extends Fragment implements  AdapterView.OnItemLongC
                 list.add(item);
             }
         }else{
-            
         }
         return list;
     }

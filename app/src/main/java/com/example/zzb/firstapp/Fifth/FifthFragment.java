@@ -57,7 +57,6 @@ public class FifthFragment extends Fragment implements View.OnClickListener{
         dingyue.setOnClickListener(this);
         setting.setOnClickListener(this);
         shoucang.setOnClickListener(this);
-
         Button welcomebutton  = (Button)view.findViewById(R.id.welcome_button);
         welcomebutton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -81,7 +80,9 @@ public class FifthFragment extends Fragment implements View.OnClickListener{
                 startActivity(intent);
                 break;
             case R.id.fifth_dingyue:
-                Toast.makeText(context,"订阅",Toast.LENGTH_SHORT).show();
+               // Toast.makeText(context,"订阅",Toast.LENGTH_SHORT).show();
+                intent = new Intent(context,MySubscribe.class);
+                startActivity(intent);
                 break;
             case R.id.fifth_shoucang:
                 Toast.makeText(context,"收藏",Toast.LENGTH_SHORT).show();

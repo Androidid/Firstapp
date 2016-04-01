@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4c8de9"
+        >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="back"
+            android:id="@+id/fifth_subscribe_button"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@null"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我的订阅"
+            android:id="@+id/fifth_subscribe_textview"
+            android:layout_centerInParent="true"
+            />
+    </RelativeLayout>
+    <FragmentTabHost
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fifth_subscribe_tabhost"
+        android:background="#fff">
+
+
+    </FragmentTabHost>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/fifth_subscribe_fragment"
+        android:layout_weight="1"
+        android:background="#e8e8e8"
+        >
+    </FrameLayout>
+</LinearLayout>

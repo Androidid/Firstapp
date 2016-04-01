@@ -19,6 +19,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Fifth.Subscribe">
+
+        </activity>
         <activity android:name=".welcome.GuideActivity"
             android:screenOrientation="portrait"
             android:configChanges="keyboardHidden"
