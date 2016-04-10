@@ -43,7 +43,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="2015年09月21日"
-
             android:id="@+id/second_list_date"
             />
 

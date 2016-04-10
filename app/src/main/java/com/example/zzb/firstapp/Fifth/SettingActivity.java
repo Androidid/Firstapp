@@ -1,34 +1,37 @@
 package com.example.zzb.firstapp.Fifth;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.view.MenuItem;
+import android.preference.Preference;
+import android.preference.PreferenceActivity;
+import android.preference.PreferenceScreen;
+import android.widget.Toast;
 
-;import com.example.zzb.firstapp.R;
+import com.example.zzb.firstapp.R;
+
+;
 
 /**
  * Created by LiuGuoJie on 2016/3/6.
  *
- * 3/9Ë∞ÉÊàê‰∫ÜÁªßÊâø‰ªÄ‰πàÁ±ª  Âíå ‰øÆÊîπ‰∫Ü‰∏ã layout
+ * 3/9µ˜≥…¡ÀºÃ≥– ≤√¥¿‡  ∫Õ –ﬁ∏ƒ¡Àœ¬ layout
  */
-public class SettingActivity extends AppCompatActivity {
-
+public class SettingActivity extends PreferenceActivity {
+    private Preference refresh;
+    private Preference normal_setting;
+    private Preference account_bangdi;
+    private Preference change_mima;
+    private Preference about_this_app;
+    private Preference log_out;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        addPreferencesFromResource(R.xml.setting);
+
         setContentView(R.layout.setting_layout);
-        android.support.v7.app.ActionBar actionBar=getSupportActionBar();
-        actionBar.setDisplayShowTitleEnabled(true);
-        actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setDisplayShowHomeEnabled(false);
     }
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                this.finish();
-            default:
-                return super.onOptionsItemSelected(item);
-        }
+    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+        Toast.makeText(this,"do sth",Toast.LENGTH_SHORT).show();
+        return true;
     }
 }

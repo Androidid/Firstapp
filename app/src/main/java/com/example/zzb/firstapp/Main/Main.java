@@ -7,7 +7,11 @@ import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TabHost;
 import android.widget.TextView;
 
@@ -27,6 +31,8 @@ public class Main extends FragmentActivity implements ViewPager.OnPageChangeList
     private ThirdFragment thirdFragment = new ThirdFragment();
     private ForthFragment forthFragment = new ForthFragment();
     private FifthFragment fifthFragment = new FifthFragment(this);
+    private RelativeLayout title_layout;
+    private RelativeLayout title_right_layout;
     private int back_count = 0;
     private final Fragment[] fragments = {
             firstFragment, secondFragment, thirdFragment, forthFragment, fifthFragment
@@ -91,7 +97,7 @@ public class Main extends FragmentActivity implements ViewPager.OnPageChangeList
                 imageView.setImageResource(IMAGE_REPLACE[i]);
                 textView.setTextColor(Color.BLUE);
             }else{
-                textView.setTextColor(Color.GRAY);
+                textView.setTextColor(Color.BLACK);
                 imageView.setImageResource(IMAGE_OF_TAB[i]);
             }
         }
@@ -100,6 +106,5 @@ public class Main extends FragmentActivity implements ViewPager.OnPageChangeList
 
     @Override
     public void onPageScrollStateChanged(int state) {
-
     }
 }

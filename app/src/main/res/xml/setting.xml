@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="setting"
+    android:title="设置">
+    <Preference
+        android:key="refresh"
+        android:title="行情刷新频率"
+    />
+    <Preference
+        android:key="normal_setting"
+        android:title="通用设置"
+    />
+    <PreferenceCategory android:title="">
+        <Preference
+            android:key="account_bangdi"
+            android:title="账号绑定"
+        />
+        <Preference
+            android:key="change_mima"
+            android:title="修改密码"
+        />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="">
+        <Preference
+            android:key="about_this_app"
+            android:title="关于爱股说"
+        />
+        <Preference
+            android:key="log_out"
+            android:title="退出"
+        />
+    </PreferenceCategory>
+</PreferenceScreen>

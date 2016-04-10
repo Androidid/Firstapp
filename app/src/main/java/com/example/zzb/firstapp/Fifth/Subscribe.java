@@ -2,12 +2,14 @@ package com.example.zzb.firstapp.Fifth;
 
 import android.app.Activity;
 import android.app.Fragment;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTabHost;
 import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TabHost;
 import android.widget.TextView;
 
@@ -20,6 +22,9 @@ import org.w3c.dom.Text;
  */
 public class Subscribe extends FragmentActivity {
 
+    private LinearLayout line_left;
+    private LinearLayout line_right;
+    private LinearLayout line;
     private FragmentTabHost tabHost;
     private final String []VALUE_OF_TITLE = {
             "我的订阅","推荐订阅"

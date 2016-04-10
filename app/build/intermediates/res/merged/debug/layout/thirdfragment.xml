@@ -1,15 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent"
-    android:orientation="horizontal">
-    <TextView
+    android:orientation="vertical">
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="this is the thirdfragment"
-        android:gravity="center"
-        android:layout_gravity="center"
-        android:textSize="30sp"
-        android:textColor="#000"
-        />
+        android:layout_height="30dp"
+        android:padding="5dp"
+        >
+        <Button android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:text="编辑"
+            android:gravity="center"
+            android:id="@+id/third_edit_button"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="爱股说"
+            />
+        <Button android:layout_alignParentRight="true"
+            android:background="@drawable/subscribe"
+            android:id="@+id/third_subscribe_button"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:gravity="center"
+            />
+    </RelativeLayout>
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/third_listview"
+        android:clickable="false"
+        android:listSelector="@android:color/transparent"
+        android:cacheColorHint="@android:color/transparent"
+       >
+    </com.handmark.pulltorefresh.library.PullToRefreshListView>
+
 </LinearLayout>
 <!-- From: file:/E:/Firstapp/app/src/main/res/layout/thirdfragment.xml -->

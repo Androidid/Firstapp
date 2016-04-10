@@ -81,14 +81,15 @@ public class FifthFragment extends Fragment implements View.OnClickListener{
                 break;
             case R.id.fifth_dingyue:
                // Toast.makeText(context,"订阅",Toast.LENGTH_SHORT).show();
-                intent = new Intent(context,MySubscribe.class);
+                intent = new Intent(context,Subscribe.class);
                 startActivity(intent);
                 break;
             case R.id.fifth_shoucang:
                 Toast.makeText(context,"收藏",Toast.LENGTH_SHORT).show();
                 break;
             case R.id.user_pro:
-                Toast.makeText(context,"个人",Toast.LENGTH_SHORT).show();
+                intent=new Intent(context,PersonalPage.class);
+                startActivity(intent);
                 break;
         }
     }

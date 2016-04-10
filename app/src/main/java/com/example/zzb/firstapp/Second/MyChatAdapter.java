@@ -53,8 +53,6 @@ public class MyChatAdapter extends ArrayAdapter<ChatContent> {
         }
         SimpleDateFormat sdf   = new SimpleDateFormat("yyyy年MM月dd日 HH:mm:ss");
         String data  = sdf.format(new Date(System.currentTimeMillis()));
-
-
             ChatContent chatContent = getItem(position);
 
             if(ChatActivity.list.size()>1) {

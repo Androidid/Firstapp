@@ -33,6 +33,9 @@
         android:screenOrientation="portrait">
 
     </activity>
+        <activity android:name=".Fifth.PersonalPage"
+            android:screenOrientation="portrait"
+            />
     <activity android:name=".LoginAndRegist.FindPasswordActivity"
         android:screenOrientation="portrait"
         />

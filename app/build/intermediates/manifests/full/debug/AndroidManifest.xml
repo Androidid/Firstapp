@@ -28,6 +28,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.example.zzb.firstapp.Fifth.Subscribe" >
+        </activity>
         <activity
             android:name="com.example.zzb.firstapp.welcome.GuideActivity"
             android:configChanges="keyboardHidden"
@@ -39,6 +41,9 @@
             android:launchMode="singleTask"
             android:screenOrientation="portrait" >
         </activity>
+        <activity
+            android:name="com.example.zzb.firstapp.Fifth.PersonalPage"
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.example.zzb.firstapp.LoginAndRegist.FindPasswordActivity"
             android:screenOrientation="portrait" />

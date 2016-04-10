@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PullScrollView">
+        <attr name="ImgHead" format="reference"/>
+        <attr name="ImgHeight" format="dimension"/>
+        <attr name="ImgVisibleHeight" format="dimension"/>
+    </declare-styleable>
+</resources>

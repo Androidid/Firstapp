@@ -1,57 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#e8e8e8">
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#dad9d9"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="杩斿洖"
+            android:textIsSelectable="false"
+            android:textSize="@dimen/abc_action_bar_progress_bar_size" />
+    </LinearLayout>
+    <ListView android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#fff"
-        android:gravity="fill"
-        android:paddingLeft="15dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="1dip"
-        android:text="行情刷新频率"/>
-    <Button
-        android:layout_marginBottom="10dp"
-        android:elevation="1dip"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#fff"
-        android:gravity="fill"
-        android:paddingLeft="15dp"
-        android:text="通用设置" />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#fff"
-        android:gravity="fill"
-        android:paddingLeft="15dp"
-        android:layout_marginBottom="1dip"
-        android:text="账号绑定"/>
-    <Button
-        android:layout_marginBottom="10dp"
-        android:elevation="1dip"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#fff"
-        android:gravity="fill"
-        android:paddingLeft="15dp"
-        android:text="修改密码" />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#fff"
-        android:gravity="fill"
-        android:paddingLeft="15dp"
-        android:layout_marginBottom="1dip"
-        android:text="关于爱股说"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#fff"
-        android:gravity="fill"
-        android:paddingLeft="15dp"
-        android:text="退出" />
 </LinearLayout>

@@ -36,6 +36,7 @@
         android:layout_width="60dp"
         android:layout_height="30dp"
         android:text="取消"
+        android:textColor="#fff"
         android:layout_gravity="center_vertical"
         android:id="@+id/fifth_subscribe_listview_adapter_button_cancel"
         android:background="#cca79d9a"
