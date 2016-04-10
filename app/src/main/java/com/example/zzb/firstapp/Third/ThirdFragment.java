@@ -30,7 +30,7 @@ public class ThirdFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.thirdfragment,container,false);
-        edit_button = (Button)view.findViewById(R.id.third_edit_button);
+        edit_button = (Button)view.findViewById(R.id.third_topic_button);
         subscribe_button = (Button)view.findViewById(R.id.fifth_subscribe_button);
         listView = (PullToRefreshListView)view.findViewById(R.id.third_listview);
 

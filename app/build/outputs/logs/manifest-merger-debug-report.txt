@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:1:1-64:12
+ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:1:1-65:12
 	package
 		ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:2:5-39
 		INJECTED from E:\Firstapp\app\src\main\AndroidManifest.xml
@@ -14,7 +14,7 @@ ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:1:1-64:12
 		INJECTED from E:\Firstapp\app\src\main\AndroidManifest.xml
 		INJECTED from E:\Firstapp\app\src\main\AndroidManifest.xml
 application
-ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:4:5-61:19
+ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:4:5-62:19
 MERGED from [com.android.support:appcompat-v7:23.1.1] E:\Firstapp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.1.1] E:\Firstapp\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
 MERGED from [Firstapp:library:unspecified] E:\Firstapp\app\build\intermediates\exploded-aar\Firstapp\library\unspecified\AndroidManifest.xml:11:5-20
@@ -90,56 +90,60 @@ ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:39:5-41:11
 		ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:40:9-45
 	android:name
 		ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:39:15-66
+activity#com.example.zzb.firstapp.Forth.ArticleActivity
+ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:42:9-58
+	android:name
+		ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:42:19-56
 activity#com.example.zzb.firstapp.LoginAndRegist.LoginActivity
-ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:42:5-43:47
+ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:43:5-44:47
 	android:screenOrientation
-		ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:43:9-45
+		ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:44:9-45
 	android:name
-		ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:42:15-59
+		ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:43:15-59
 activity#com.example.zzb.firstapp.LoginAndRegist.MakeNichengActivity
-ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:44:5-45:47
+ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:45:5-46:47
 	android:screenOrientation
-		ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:45:9-45
+		ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:46:9-45
 	android:name
-		ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:44:15-65
+		ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:45:15-65
 activity#com.example.zzb.firstapp.LoginAndRegist.RegisterActivity
-ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:47:5-48:47
+ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:48:5-49:47
 	android:screenOrientation
-		ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:48:9-45
+		ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:49:9-45
 	android:name
-		ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:47:15-62
+		ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:48:15-62
 activity#com.example.zzb.firstapp.Second.ChatActivity
-ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:49:5-50:47
+ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:50:5-51:47
 	android:screenOrientation
-		ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:50:9-45
+		ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:51:9-45
 	android:name
-		ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:49:15-50
+		ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:50:15-50
 activity#com.example.zzb.firstapp.Fifth.SettingActivity
-ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:51:9-53:51
+ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:52:9-54:51
 	android:screenOrientation
-		ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:53:13-49
+		ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:54:13-49
 	android:label
-		ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:52:13-31
+		ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:53:13-31
 	android:name
-		ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:51:19-56
+		ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:52:19-56
 activity#com.example.zzb.firstapp.Forth.FriendCircleActivity
-ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:54:9-56:15
+ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:55:9-57:15
 	android:screenOrientation
-		ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:55:13-49
+		ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:56:13-49
 	android:name
-		ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:54:19-61
+		ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:55:19-61
 activity#com.example.zzb.firstapp.Forth.PublishArticleActivity
-ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:57:9-58:51
+ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:58:9-59:51
 	android:screenOrientation
-		ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:58:13-49
+		ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:59:13-49
 	android:name
-		ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:57:19-63
+		ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:58:19-63
 activity#com.example.zzb.firstapp.Fifth.AssortMain
-ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:59:9-60:51
+ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:60:9-61:51
 	android:screenOrientation
-		ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:60:13-49
+		ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:61:13-49
 	android:name
-		ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:59:19-51
+		ADDED from E:\Firstapp\app\src\main\AndroidManifest.xml:60:19-51
 uses-sdk
 INJECTED from E:\Firstapp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:23.1.1] E:\Firstapp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\AndroidManifest.xml:20:5-43

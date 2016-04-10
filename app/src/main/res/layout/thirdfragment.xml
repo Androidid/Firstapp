@@ -4,19 +4,22 @@
     android:orientation="vertical">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="40dp"
         android:padding="5dp"
+        android:background="#4b7edc"
         >
         <Button android:layout_alignParentLeft="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@null"
-            android:text="编辑"
-            android:gravity="center"
-            android:id="@+id/third_edit_button"/>
+            android:gravity="left|center_vertical"
+            android:text="话题"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/third_topic_button"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="20sp"
             android:layout_centerInParent="true"
             android:text="爱股说"
             />
@@ -26,6 +29,7 @@
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:gravity="center"
+            android:layout_centerVertical="true"
             />
     </RelativeLayout>
     <com.handmark.pulltorefresh.library.PullToRefreshListView

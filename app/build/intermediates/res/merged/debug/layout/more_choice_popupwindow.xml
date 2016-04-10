@@ -1,0 +1,37 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/shoucang_more"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginBottom="0dp"
+        android:text="收藏"
+        android:textSize="20sp" 
+        android:background="#FFFFFF"/>
+    <Button
+        android:id="@+id/jubao_more"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginBottom="0dp"
+        android:text="举报"
+        android:textSize="20sp" 
+        android:background="#FFFFFF"
+        />
+
+    <Button
+        android:id="@+id/cancel_more"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="5dp"
+        android:text="取消"
+        android:textSize="20sp" 
+        android:background="#FFFFFF"
+        />
+
+</LinearLayout><!-- From: file:/E:/Firstapp/app/src/main/res/layout/more_choice_popupwindow.xml -->

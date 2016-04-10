@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dowhat_background"
+    android:orientation="horizontal" >
+    
+    <LinearLayout 
+	        android:id="@+id/shoucang_dowhat"
+		    android:layout_height="wrap_content"
+		    android:layout_width="0dp"
+		    android:layout_weight="1"
+		    android:orientation="horizontal"
+		    android:layout_marginTop="5dp"
+		    android:padding="3dp"
+	    	>
+
+	    	<ImageView
+	    	    android:layout_width="25dp"
+	    	    android:layout_height="25dp"
+	    	    android:layout_gravity="center"
+	    	    android:src="@drawable/wujiaoxing_white" />
+
+	    	<TextView 
+	    	    android:layout_height="wrap_content"
+	    	    android:layout_width="wrap_content"
+	    	    android:text="收藏"
+	    	    android:textColor="#FFFFFF"
+	    	    android:layout_gravity="center"
+	    	    
+	    	    />
+	    
+		</LinearLayout>
+    
+    <LinearLayout 
+	        android:id="@+id/zhuanfa_dowhat"
+		    android:layout_height="wrap_content"
+		    android:layout_width="0dp"
+		    android:layout_weight="1"
+		    android:orientation="horizontal"
+		    android:layout_marginTop="5dp"
+		    android:padding="3dp"
+	    	>
+	    	<ImageView 
+	    	    android:layout_height="wrap_content"
+	    	    android:layout_width="wrap_content"
+	    	    android:src="@drawable/zhuanfa_icon1"
+	    	    android:layout_gravity="center"
+	    	    />
+	    	<TextView 
+	    	    android:layout_height="wrap_content"
+	    	    android:layout_width="wrap_content"
+	    	    android:text="转发"
+	    	    android:textColor="#FFFFFF"
+	    	    android:layout_gravity="center"
+	    	    />
+	    
+		</LinearLayout>
+		<LinearLayout 
+	        android:id="@+id/pinglun_dowhat"
+		    android:layout_height="wrap_content"
+		    android:layout_width="0dp"
+		    android:layout_weight="1"
+		    android:orientation="horizontal"
+		    android:layout_marginTop="5dp"
+		    android:padding="3dp"
+	    	>
+	    	<ImageView 
+	    	    android:layout_height="wrap_content"
+	    	    android:layout_width="wrap_content"
+	    	    android:src="@drawable/pinglun_icon1"
+	    	    android:layout_gravity="center"
+	    	    />
+	    	<TextView 
+	    	    android:layout_height="wrap_content"
+	    	    android:layout_width="wrap_content"
+	    	    android:text="评论"
+	    	    android:textColor="#FFFFFF"
+	    	    android:layout_gravity="center"
+	    	    />
+	    
+		</LinearLayout>
+		
+		<LinearLayout 
+	        android:id="@+id/fenxiang_dowhat"
+		    android:layout_height="wrap_content"
+		    android:layout_width="0dp"
+		    android:layout_weight="1"
+		    android:orientation="horizontal"
+		    android:layout_marginTop="5dp"
+		    android:padding="3dp"
+	    	>
+	    	<ImageView 
+	    	    android:layout_height="wrap_content"
+	    	    android:layout_width="wrap_content"
+	    	    android:src="@drawable/fenxiang_icon1"
+	    	    android:layout_gravity="center"
+	    	    />
+	    	<TextView 
+	    	    android:layout_height="wrap_content"
+	    	    android:layout_width="wrap_content"
+	    	    android:text="分享"
+	    	    android:textColor="#FFFFFF"
+	    	    android:layout_gravity="center"
+	    	    />
+	    
+		</LinearLayout>
+    
+    
+
+</LinearLayout>
+<!-- From: file:/E:/Firstapp/app/src/main/res/layout/dowhat_popupwindow.xml -->

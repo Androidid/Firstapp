@@ -68,7 +68,8 @@ public class Main extends FragmentActivity implements ViewPager.OnPageChangeList
             tabHost.addTab(spec, CLASS_OF_FRAGMENT[i], null);
             tabHost.getTabWidget().getChildTabViewAt(i).setOnClickListener(new TabClickListener(viewPager,i));
         }
-        tabHost.setCurrentTab(2);
+       viewPager.setCurrentItem(2);
+        viewPager.setOffscreenPageLimit(5);
     }
 
     private View getView(int index) {

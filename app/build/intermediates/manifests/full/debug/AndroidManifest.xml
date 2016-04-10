@@ -47,6 +47,7 @@
         <activity
             android:name="com.example.zzb.firstapp.LoginAndRegist.FindPasswordActivity"
             android:screenOrientation="portrait" />
+        <activity android:name="com.example.zzb.firstapp.Forth.ArticleActivity" />
         <activity
             android:name="com.example.zzb.firstapp.LoginAndRegist.LoginActivity"
             android:screenOrientation="portrait" />

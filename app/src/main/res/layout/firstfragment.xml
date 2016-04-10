@@ -1,14 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
-    <TextView
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical"
+   >
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="this is the firstfragment"
-        android:gravity="center"
-        android:layout_gravity="center"
-        android:textSize="30sp"
-        android:textColor="#000"
-        />
+        android:layout_height="40dp"
+        android:padding="5dp"
+        android:background="#4b7edc"
+        >
+        <Button android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="left|center_vertical"
+            android:text="编辑"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/first_edit_button"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:id="@+id/first_title"
+            android:layout_centerInParent="true"
+            android:text="爱股说"
+            />
+        <LinearLayout
+            android:layout_width="45dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginRight="3dp"
+                android:background="@drawable/search"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+        <Button
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/refresh"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_centerVertical="true"
+             />
+        </LinearLayout>
+    </RelativeLayout>
+
 </LinearLayout>
 

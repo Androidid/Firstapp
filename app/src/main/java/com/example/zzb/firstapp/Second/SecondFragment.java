@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.zzb.firstapp.R;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
@@ -26,7 +27,6 @@ public class SecondFragment extends Fragment implements  AdapterView.OnItemLongC
 
     private  String date_text;
     public PullToRefreshListView pullToRefreshListView;
-
     public  static ArrayList<Second_Item>list = new ArrayList<Second_Item>();
     private MySecondAdapter mySecondAdapter;
     @Nullable
@@ -75,6 +75,7 @@ public class SecondFragment extends Fragment implements  AdapterView.OnItemLongC
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         Intent intent   = new Intent (getActivity(),ChatActivity.class);
+     //   Toast.makeText(getContext(),list.get(position).getTitle(),Toast.LENGTH_SHORT).show();
         intent.putExtra("id", position);
         intent.putExtra("title",list.get(position).getTitle());
         startActivity(intent);

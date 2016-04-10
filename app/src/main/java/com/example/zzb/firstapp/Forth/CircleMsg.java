@@ -1,9 +1,17 @@
 package com.example.zzb.firstapp.Forth;
 
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
 import android.util.Log;
 
 public class CircleMsg {
 	
+	public static ArrayList<CircleMsg> msglist=new ArrayList<CircleMsg>();
+	public static ArrayList<CircleMsg> shoucanglist=new ArrayList<CircleMsg>();
+	private ArrayList<Pinglun> pinglunlist=new ArrayList<Pinglun>();
 	private String writer;
 	private String content;
 	private int countOfZan=0;
@@ -12,11 +20,11 @@ public class CircleMsg {
 	private String zhuanfaFromwho;
 	private int countOfPinglun=0;
 	private long time;
-	
+	private boolean hasShoucang=false;
+	private boolean hasZan=false;
 	
 	public CircleMsg(String writer,String content)
 	{
-		Log.d("wen", "getView");
 		this.writer=writer;
 		this.content=content;
 		time=System.currentTimeMillis();
@@ -30,6 +38,39 @@ public class CircleMsg {
 		this.zhuanfaContent=zhuanfaContent;
 		time=System.currentTimeMillis();
 		isZhuanfa=true;
+	}
+	
+	public List getPinglunlist()
+	{
+		return pinglunlist;
+	}
+	public void addPinglun(Pinglun pl)
+	{
+		countOfPinglun++;
+		pinglunlist.add(0, pl);
+	}
+	public void removePinglun(Pinglun pl)
+	{
+		countOfPinglun--;
+		pinglunlist.remove(pl);
+	}
+	
+	public boolean hasZan()
+	{
+		return hasZan;
+	}
+	public void setZan()
+	{
+		hasZan=!hasZan;
+	}
+	
+	public boolean hasShoucang()
+	{
+		return hasShoucang;
+	}
+	public void setHasShoucang()
+	{
+		hasShoucang=!hasShoucang;
 	}
 	
 	public String getWriter() {
@@ -122,10 +163,21 @@ public class CircleMsg {
 	  
 	    long hour = (long) Math.ceil(time/60/60/1000.0f);// 小时  
 	  
-	    long day = (long) Math.ceil(time/24/60/60/1000.0f);// 天前  
-	  
-	    if (day - 1 > 0) {  
-	        sb.append(day + "天");  
+	    long day = (long) Math.ceil(time/24/60/60/1000.0f);// 天前 
+	    
+	    int flag=0;
+	    if(day>2)
+	    {
+	    	SimpleDateFormat format=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");  
+	        Date d1=new Date(time);  
+	        sb.append(format.format(d1)); 
+	        flag=1;
+	    }
+	    else if(day==2){
+	    	sb.append("前天");
+	    }
+	    else if (day - 1 == 0) {  
+	        sb.append("昨天");  
 	    } else if (hour - 1 > 0) {  
 	        if (hour >= 24) {  
 	            sb.append("1天");  
@@ -139,16 +191,16 @@ public class CircleMsg {
 	            sb.append(minute + "分钟");  
 	        }  
 	    } else if (mill - 1 > 0) {  
-	        if (mill == 60) {  
+	        if (mill == 60) 
 	            sb.append("1分钟");  
-	        } else {  
+	         else  
 	            sb.append(mill + "秒");  
-	        }  
 	    } else {  
 	        sb.append("刚刚");  
 	    }  
-	    if (!sb.toString().equals("刚刚")) {  
-	        sb.append("前");  
+	    if (!sb.toString().equals("刚刚")&&!sb.toString().equals("昨天")&&!sb.toString().equals("前天")) {  
+	        if(flag==0)
+	        	sb.append("前");
 	    }  
 	    return sb.toString();  
 	} 

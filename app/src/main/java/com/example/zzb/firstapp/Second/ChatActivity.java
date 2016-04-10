@@ -34,9 +34,10 @@ public class ChatActivity extends Activity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.chat_layout);
-        Intent intent = new Intent();
+        Intent intent = getIntent();
         TextView textView = (TextView)findViewById(R.id.chat_title);
         textView.setText(intent.getStringExtra("title"));
+      //  Toast.makeText(this,intent.getStringExtra("title"),Toast.LENGTH_SHORT).show();
         int id = getIntent().getIntExtra("id",-1);
         SharedPreferences pref = getSharedPreferences("chatrecord",MODE_PRIVATE);
         if(pref.getBoolean(id+"",false)==true){

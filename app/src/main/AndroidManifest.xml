@@ -39,6 +39,7 @@
     <activity android:name=".LoginAndRegist.FindPasswordActivity"
         android:screenOrientation="portrait"
         />
+        <activity android:name=".Forth.ArticleActivity"/>
     <activity android:name=".LoginAndRegist.LoginActivity"
         android:screenOrientation="portrait"/>
     <activity android:name=".LoginAndRegist.MakeNichengActivity"
