@@ -14,46 +14,46 @@ import com.example.zzb.firstapp.R;
 
 /**
  * Created by LiuGuoJie on 2016/4/9.
- * ²Î¿¼×Ô¶¨Òå×é¼şPullScroll
- * ¶¨ÒåattributeºÍ¿´ÁËScrollViewĞèÒª¼¯³ÉÊ²Ã´  2016.4.8
- * Íê³ÉÒ»²¿·Ö±àĞ´
+ * å‚è€ƒè‡ªå®šä¹‰ç»„ä»¶PullScroll
+ * å®šä¹‰attributeå’Œçœ‹äº†ScrollViewéœ€è¦é›†æˆä»€ä¹ˆ  2016.4.8
+ * å®Œæˆä¸€éƒ¨åˆ†ç¼–å†™
  */
 public class PullScrollView extends ScrollView {
-    private static final float ABOUT_SCROLL=0.5f;//¹ØºõÓÚ»¬¶¯ËÙ¶È
+    private static final float ABOUT_SCROLL=0.5f;//å…³ä¹äºæ»‘åŠ¨é€Ÿåº¦
 
     private static final int TURN_DISTANCE = 100;
 
-    private View Img;//¶¥²¿±³¾°Í¼Æ¬
+    private View Img;//é¡¶éƒ¨èƒŒæ™¯å›¾ç‰‡
 
-    private int ImgHeight;//Í¼Æ¬¸ß¶È
+    private int ImgHeight;//å›¾ç‰‡é«˜åº¦
 
-    private int ImgVisibleHeight;//¿É¼û¸ß¶È
+    private int ImgVisibleHeight;//å¯è§é«˜åº¦
 
-    private View contentview;//ScrollViewµÄcontestView
+    private View contentview;//ScrollViewçš„contestView
 
-    private Rect contntRect=new Rect();//ScrollµÄ¾ØĞÎ
+    private Rect contntRect=new Rect();//Scrollçš„çŸ©å½¢
 
-    private float touchdownY;//µã»÷ÆÁÄ»Ê±YÖµ
+    private float touchdownY;//ç‚¹å‡»å±å¹•æ—¶Yå€¼
 
-    private boolean abletoTouch=false;//ÊÇ·ñ¹Ø±Õ»¬¶¯
+    private boolean abletoTouch=false;//æ˜¯å¦å…³é—­æ»‘åŠ¨
 
-    private boolean ismoving=false;//ÕıÔÚÒÆ¶¯
+    private boolean ismoving=false;//æ­£åœ¨ç§»åŠ¨
 
-    private boolean isTop=false;//ÊÇ·ñÊÇ¶¥²¿
+    private boolean isTop=false;//æ˜¯å¦æ˜¯é¡¶éƒ¨
 
-    private int InitTop, InitBottom;//Í¼Æ¬³õÊ¼Ê±¶¥²¿ºÍµ×²¿
+    private int InitTop, InitBottom;//å›¾ç‰‡åˆå§‹æ—¶é¡¶éƒ¨å’Œåº•éƒ¨
 
-    private int CurrentTop, CurrentBottom;//Í¼Æ¬µ±Ç°¶¥²¿ºÍµ×²¿
+    private int CurrentTop, CurrentBottom;//å›¾ç‰‡å½“å‰é¡¶éƒ¨å’Œåº•éƒ¨
 
-    private OnTurnListener onturnlistener;//ÉèÖÃ±ä»¯¼àÌıÆ÷
+    private OnTurnListener onturnlistener;//è®¾ç½®å˜åŒ–ç›‘å¬å™¨
 
-    private enum State{ //Éè¶¨Èı×´Ì¬
+    private enum State{ //è®¾å®šä¸‰çŠ¶æ€
         UP,DOWN,NORMAL
     }
 
     private State nowState= State.NORMAL;
 
-    /*ÈıÖÖ¹¹Ôìº¯Êı*/
+    /*ä¸‰ç§æ„é€ å‡½æ•°*/
     public PullScrollView(Context context){
         super(context);
         init(context,null);
@@ -69,14 +69,14 @@ public class PullScrollView extends ScrollView {
 
     private void init(Context context,AttributeSet attr){
         Log.d("Liar","OK");
-        setOverScrollMode(OVER_SCROLL_NEVER);//ÉèÖÃ¹ö¶¯Ğ§¹û
+        setOverScrollMode(OVER_SCROLL_NEVER);//è®¾ç½®æ»šåŠ¨æ•ˆæœ
         if(attr!=null){
-            TypedArray myArray=context.obtainStyledAttributes(attr, R.styleable.PullScrollView);//»ñÈ¡ÕâĞ©ÊôĞÔ
+            TypedArray myArray=context.obtainStyledAttributes(attr, R.styleable.PullScrollView);//è·å–è¿™äº›å±æ€§
 
-            if(myArray !=null) {//ÓĞÍ¼Æ¬ÊôĞÔ
+            if(myArray !=null) {//æœ‰å›¾ç‰‡å±æ€§
                 ImgHeight=(int)myArray.getDimension(R.styleable.PullScrollView_ImgHeight,-1);
                 ImgVisibleHeight=(int)myArray.getDimension(R.styleable.PullScrollView_ImgVisibleHeight,-1);
-                myArray.recycle();//ÖØÖÃ
+                myArray.recycle();//é‡ç½®
             }
         }
     }
@@ -90,8 +90,8 @@ public class PullScrollView extends ScrollView {
     }
 
     @Override
-    protected void onFinishInflate(){//µ±findIdByÍê³Éºóµ÷ÓÃ
-        if(getChildCount()>0){//ÖÁÉÙÓĞÒ»¸ö
+    protected void onFinishInflate(){//å½“findIdByå®Œæˆåè°ƒç”¨
+        if(getChildCount()>0){//è‡³å°‘æœ‰ä¸€ä¸ª
             contentview=getChildAt(0);
         }
     }
@@ -117,26 +117,26 @@ public class PullScrollView extends ScrollView {
     @Override
     public boolean onTouchEvent(MotionEvent ev) {
         if (contentview != null) {
-            doTouchEvent(ev);//µ±·¢ÉúÁË³ö·¢´¥Ãş£¬ÔòÈ¥´¦Àí
+            doTouchEvent(ev);//å½“å‘ç”Ÿäº†å‡ºå‘è§¦æ‘¸ï¼Œåˆ™å»å¤„ç†
         }
-        return abletoTouch || super.onTouchEvent(ev);//ÊÇ·ñ»¬¶¯
+        return abletoTouch || super.onTouchEvent(ev);//æ˜¯å¦æ»‘åŠ¨
     }
 
     private void doTouchEvent(MotionEvent event) {
         int action = event.getAction();
 
         switch (action) {
-            case MotionEvent.ACTION_MOVE://Çø±ğÓÚUP DOWN
-                doActionMove(event);//´¦Àí¶¯»­
+            case MotionEvent.ACTION_MOVE://åŒºåˆ«äºUP DOWN
+                doActionMove(event);//å¤„ç†åŠ¨ç”»
                 break;
 
             case MotionEvent.ACTION_UP:
-                if (isNeedAnimation()) {//ÊÇ·ñĞèÒª¶¯»­
+                if (isNeedAnimation()) {//æ˜¯å¦éœ€è¦åŠ¨ç”»
                     rollBackAnimation();
                 }
 
                 if (getScrollY() == 0) {
-                    // µ±¹ö¶¯µ½¶¥²¿Ê±£¬½«×´Ì¬ÉèÖÃÎªÕı³££¬±ÜÃâÏÈÏòÉÏÍÏ¶¯ÔÙÏòÏÂÍÏ¶¯µ½¶¥¶ËºóÊ×´Î´¥Ãş²»ÏìÓ¦µÄÎÊÌâ
+                    // å½“æ»šåŠ¨åˆ°é¡¶éƒ¨æ—¶ï¼Œå°†çŠ¶æ€è®¾ç½®ä¸ºæ­£å¸¸ï¼Œé¿å…å…ˆå‘ä¸Šæ‹–åŠ¨å†å‘ä¸‹æ‹–åŠ¨åˆ°é¡¶ç«¯åé¦–æ¬¡è§¦æ‘¸ä¸å“åº”çš„é—®é¢˜
                     nowState = State.NORMAL;
                 }
 
@@ -150,11 +150,11 @@ public class PullScrollView extends ScrollView {
     }
 
     private void doActionMove(MotionEvent event) {
-        // µ±¹ö¶¯µ½¶¥²¿Ê±£¬½«×´Ì¬ÉèÖÃÎªÕı³££¬±ÜÃâÏÈÏòÉÏÍÏ¶¯ÔÙÏòÏÂÍÏ¶¯µ½¶¥¶ËºóÊ×´Î´¥Ãş²»ÏìÓ¦µÄÎÊÌâ
+        // å½“æ»šåŠ¨åˆ°é¡¶éƒ¨æ—¶ï¼Œå°†çŠ¶æ€è®¾ç½®ä¸ºæ­£å¸¸ï¼Œé¿å…å…ˆå‘ä¸Šæ‹–åŠ¨å†å‘ä¸‹æ‹–åŠ¨åˆ°é¡¶ç«¯åé¦–æ¬¡è§¦æ‘¸ä¸å“åº”çš„é—®é¢˜
         if (getScrollY() == 0) {
             nowState = State.NORMAL;
 
-            // »¬¶¯¾­¹ı¶¥²¿³õÊ¼Î»ÖÃÊ±£¬ĞŞÕıTouch downµÄ×ø±êÎªµ±Ç°TouchµãµÄ×ø±ê
+            // æ»‘åŠ¨ç»è¿‡é¡¶éƒ¨åˆå§‹ä½ç½®æ—¶ï¼Œä¿®æ­£Touch downçš„åæ ‡ä¸ºå½“å‰Touchç‚¹çš„åæ ‡
             if (isTop) {
                 isTop = false;
                 touchdownY = event.getY();
@@ -163,7 +163,7 @@ public class PullScrollView extends ScrollView {
 
         float deltaY = event.getY() - touchdownY;
 
-        // ¶ÔÓÚÊ×´ÎTouch²Ù×÷ÒªÅĞ¶Ï·½Î»£ºUP OR DOWN
+        // å¯¹äºé¦–æ¬¡Touchæ“ä½œè¦åˆ¤æ–­æ–¹ä½ï¼šUP OR DOWN
         if (deltaY < 0 && nowState == State.NORMAL) {
             nowState = State.UP;
         } else if (deltaY > 0 && nowState == State.NORMAL) {
@@ -184,47 +184,47 @@ public class PullScrollView extends ScrollView {
             deltaY = deltaY < 0 ? 0 : deltaY;
         }
 
-        if (ismoving) {//ÒÆ¶¯ÖĞ
-            // ³õÊ¼»¯content view¾ØĞÎ
+        if (ismoving) {//ç§»åŠ¨ä¸­
+            // åˆå§‹åŒ–content viewçŸ©å½¢
             if (contntRect.isEmpty()) {
-                // ±£´æÕı³£µÄ²¼¾ÖÎ»ÖÃ
+                // ä¿å­˜æ­£å¸¸çš„å¸ƒå±€ä½ç½®
                 contntRect.set(contentview.getLeft(), contentview.getTop(), contentview.getRight(),
                         contentview.getBottom());
             }
 
-            // ¼ÆËãImgÒÆ¶¯¾àÀë(ÊÖÊÆÒÆ¶¯µÄ¾àÀë*×èÄáÏµÊı*0.5)
+            // è®¡ç®—Imgç§»åŠ¨è·ç¦»(æ‰‹åŠ¿ç§»åŠ¨çš„è·ç¦»*é˜»å°¼ç³»æ•°*0.5)
             float headerMoveHeight = deltaY * ABOUT_SCROLL;
             CurrentTop = (int) (InitTop + headerMoveHeight);
             CurrentBottom = (int) (InitBottom + headerMoveHeight);
 
-            // ¼ÆËãcontentÒÆ¶¯¾àÀë(ÊÖÊÆÒÆ¶¯µÄ¾àÀë*×èÄáÏµÊı)
+            // è®¡ç®—contentç§»åŠ¨è·ç¦»(æ‰‹åŠ¿ç§»åŠ¨çš„è·ç¦»*é˜»å°¼ç³»æ•°)
             float contentMoveHeight = deltaY * ABOUT_SCROLL;
 
-            // ĞŞÕıcontentÒÆ¶¯µÄ¾àÀë£¬±ÜÃâ³¬¹ıImgµÄµ×±ßÔµ
+            // ä¿®æ­£contentç§»åŠ¨çš„è·ç¦»ï¼Œé¿å…è¶…è¿‡Imgçš„åº•è¾¹ç¼˜
             int headerBottom = CurrentBottom - ImgVisibleHeight;
             int top = (int) (contntRect.top + contentMoveHeight);
             int bottom = (int) (contntRect.bottom + contentMoveHeight);
 
             if (top <= headerBottom && CurrentTop<=InitTop+TURN_DISTANCE) {
-                // ÒÆ¶¯content view
+                // ç§»åŠ¨content view
                 contentview.layout(contntRect.left, top, contntRect.right, bottom);
 
-                // ÒÆ¶¯header view
+                // ç§»åŠ¨header view
                 Img.layout(Img.getLeft(), CurrentTop, Img.getRight(), CurrentBottom);
             }
         }
     }
 
-    private void rollBackAnimation() { //ÉÏÀ­»Ø¹ö¶¯»­
+    private void rollBackAnimation() { //ä¸Šæ‹‰å›æ»šåŠ¨ç”»
         CurrentTop= Math.min(InitTop+TURN_DISTANCE,CurrentTop);
         TranslateAnimation tranAnim = new TranslateAnimation(0, 0,
-                Math.abs(InitTop - CurrentTop), 0);//¶¯»­
+                Math.abs(InitTop - CurrentTop), 0);//åŠ¨ç”»
         tranAnim.setDuration(200);
         Img.startAnimation(tranAnim);
 
         Img.layout(Img.getLeft(), InitTop, Img.getRight(), InitBottom);
 
-        // ¿ªÆôÒÆ¶¯¶¯»­
+        // å¼€å¯ç§»åŠ¨åŠ¨ç”»
         TranslateAnimation innerAnim = new TranslateAnimation(0, 0, contentview.getTop(), contntRect.top);
         innerAnim.setDuration(200);
         contentview.startAnimation(innerAnim);
@@ -232,14 +232,14 @@ public class PullScrollView extends ScrollView {
 
         contntRect.setEmpty();
 
-        // »Øµ÷¼àÌıÆ÷
+        // å›è°ƒç›‘å¬å™¨
         if (CurrentTop > InitTop + TURN_DISTANCE && onturnlistener != null){
             onturnlistener.onTurn();
         }
     }
 
     /**
-     * ÊÇ·ñĞèÒª¿ªÆô¶¯»­
+     * æ˜¯å¦éœ€è¦å¼€å¯åŠ¨ç”»
      */
     private boolean isNeedAnimation() {
         return !contntRect.isEmpty() && ismoving;

@@ -199,7 +199,12 @@ public class CircleMsgAdapter extends ArrayAdapter<CircleMsg>{
 	            	if(msg.hasShoucang())
 	    			{
 	    				msg.setHasShoucang();
-	    				CircleMsg.shoucanglist.remove(msg);
+						for(int i=CircleMsg.shoucanglist.size()-1;i>=0;i--){
+							if(CircleMsg.shoucanglist.get(i).equals(msg))
+								CircleMsg.shoucanglist.remove(i);
+								break;
+						}
+
 	    				Toast.makeText(context, "取消收藏成功", Toast.LENGTH_SHORT).show();
 	    			}
 	    			else

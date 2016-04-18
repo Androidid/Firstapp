@@ -8,9 +8,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.zzb.firstapp.R;
+import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -19,9 +21,19 @@ import java.util.List;
 public class RecommendSubscribe extends Fragment {
     private static List<MySubscribeMessage> list = new ArrayList<MySubscribeMessage>();
     private PullToRefreshListView pullToRefreshListView;
-    private FifthSubscribeListviewAdapter adapter;
-    public void addData(MySubscribeMessage mySubscribeMessage){
+    private static FifthSubscribeListviewAdapter adapter;
+    public static void addData(MySubscribeMessage mySubscribeMessage){
         list.add(mySubscribeMessage);
+    }
+    public static void removeData(MySubscribeMessage mySubscribeMessage){
+        for (Iterator it = list.iterator(); it.hasNext();){
+            if(it.next().equals(mySubscribeMessage)){
+                it.remove();
+                adapter.notifyDataSetChanged();
+                break;
+            }
+        }
+
     }
     @Nullable
     @Override
@@ -32,6 +44,7 @@ public class RecommendSubscribe extends Fragment {
             list.add(new MySubscribeMessage("股市段子手", "股市人生,沉浮当笑傲"));
         }
         pullToRefreshListView = (PullToRefreshListView)view.findViewById(R.id.fifth_recommendsubscribe_listview);
+        pullToRefreshListView.setMode(PullToRefreshBase.Mode.BOTH);
         adapter  = new FifthSubscribeListviewAdapter(getContext(),android.R.layout.simple_list_item_1,list,FifthSubscribeListviewAdapter.RECOMMENDSUBSCRIBE);
         pullToRefreshListView.setAdapter(adapter);
         return view;

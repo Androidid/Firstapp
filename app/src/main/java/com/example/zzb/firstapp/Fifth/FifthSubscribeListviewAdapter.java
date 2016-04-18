@@ -36,7 +36,7 @@ public class FifthSubscribeListviewAdapter extends ArrayAdapter{
         this.type = type;
     }
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
         View view = LayoutInflater.from(context).inflate(R.layout.fifth_subscribe_listview_adapter,null);
         Button button  = (Button )view.findViewById(R.id.fifth_subscribe_listview_adapter_button_cancel);
         title_textview = (TextView)view.findViewById(R.id.fifth_subscribe_listview_adapter_title);
@@ -47,7 +47,6 @@ public class FifthSubscribeListviewAdapter extends ArrayAdapter{
         if(type ==RECOMMENDSUBSCRIBE)
         {
             button.setText("订阅");
-
             button.setBackgroundColor(Color.GREEN);
         }
         else{
@@ -56,16 +55,23 @@ public class FifthSubscribeListviewAdapter extends ArrayAdapter{
             button.setBackgroundColor(Color.GRAY);
         }
         button.setOnClickListener(new View.OnClickListener() {
-            @Override
+                      @Override
             public void onClick(View v) {
+                MySubscribeMessage mySubscribeMessage = list.get(position);
                 switch (type){
                     case FifthSubscribeListviewAdapter.MYSUBSCRIBE:
+                        RecommendSubscribe.addData(mySubscribeMessage);
+                        MySubscribe.removeDate(mySubscribeMessage);
                         Toast.makeText(getContext(),"click 取消",Toast.LENGTH_SHORT).show();
                         break;
                     case FifthSubscribeListviewAdapter.RECOMMENDSUBSCRIBE:
+                        MySubscribe.addDate(mySubscribeMessage);
+                        RecommendSubscribe.removeData(mySubscribeMessage);
                         Toast.makeText(getContext(),"click 确定",Toast.LENGTH_SHORT).show();
                         break;
                 }
+
+
             }
         });
         return view;

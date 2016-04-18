@@ -104,6 +104,7 @@
         android:layout_marginRight="5dp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
+        android:id="@+id/forth_bottom_line"
         >
         <TextView 
             android:layout_alignParentLeft="true"

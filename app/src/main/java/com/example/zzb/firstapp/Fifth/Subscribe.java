@@ -38,7 +38,7 @@ public class Subscribe extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fifth_subscribe);
         tabHost = (FragmentTabHost)findViewById(R.id.fifth_subscribe_tabhost);
-        tabHost.setup(this,getSupportFragmentManager(),R.id.fifth_subscribe_fragment);
+        tabHost.setup(this,getSupportFragmentManager(),android.R.id.tabcontent);
         for(int  i = 0;i<VALUE_OF_TITLE.length;i++){
             TabHost.TabSpec tabSpec = tabHost.newTabSpec(VALUE_OF_TITLE[i]).setIndicator(getView(i));
             tabHost.addTab(tabSpec,CLASS_OF_FRAGMENT[i],null);

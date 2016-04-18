@@ -13,7 +13,7 @@ import com.example.zzb.firstapp.R;
 /**
  * Created by LiuGuoJie on 2016/3/6.
  *
- * 3/9µ÷³ÉÁË¼Ì³ĞÊ²Ã´Àà  ºÍ ĞŞ¸ÄÁËÏÂ layout
+ * 3/9è°ƒæˆäº†ç»§æ‰¿ä»€ä¹ˆç±»  å’Œ ä¿®æ”¹äº†ä¸‹ layout
  */
 public class SettingActivity extends PreferenceActivity {
     private Preference refresh;

@@ -73,6 +73,9 @@
         <activity
             android:name="com.example.zzb.firstapp.Fifth.AssortMain"
             android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.zzb.firstapp.Fifth.CollectList"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
